@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -82,12 +83,14 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
 .ptag{display:inline-block;background:#6660B4;color:#fff;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:14px}
 .pname{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:20px}
 .pprice{font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;color:#FFBEF5;line-height:1;margin-bottom:4px}
-.pprice .punit{font-size:16px;font-weight:700;color:#FFBEF5;opacity:.9}
+.pperiod{font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:22px}
 .pitems{list-style:none;margin-bottom:20px}
 .pitems li{padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:13px;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:10px}
 .pitems li::before{content:'✓';color:#6660B4;font-weight:700;flex-shrink:0}
-.pimpl{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);margin-top:14px;background:rgba(255,190,245,0.08);border:1px solid rgba(255,190,245,0.25);border-radius:12px;padding:14px 16px}
-.pimpl strong{color:#FFBEF5;font-size:15px}
+.ptotal{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:rgba(255,255,255,0.7);margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.08)}
+.ptotal strong{color:#FFBEF5}
+.validity-box{margin-top:22px;text-align:center;font-size:12px;color:rgba(255,255,255,0.6);border:1px solid rgba(255,190,245,0.35);border-radius:100px;padding:9px 20px;display:block}
+.validity-box strong{color:#FFBEF5}
 
 .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0;position:relative}
 .timeline::before{content:'';position:absolute;top:27px;left:0;right:0;height:2px;background:linear-gradient(90deg,#6660B4,#FFBEF5);z-index:0}
@@ -135,12 +138,12 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
     </svg>
   </div>
   <div><div class="badge">Diagnóstico de ROI</div></div>
-  <h1>Compras que pagam<br><em>o próprio investimento</em></h1>
+  <h1>Obras que avançam<br><em>sem travar nas compras</em></h1>
   <p class="hero-sub">Projeção de retorno para <strong>Lyx</strong> · 3 Assistentes de IA</p>
   <div class="hero-metrics">
     <div class="hm"><div class="hm-val">R$ 10M</div><div class="hm-lbl">Volume de compras/mês</div></div>
-    <div class="hm"><div class="hm-val">79×</div><div class="hm-lbl">Retorno realista Ano 1</div></div>
-    <div class="hm"><div class="hm-val">5 dias</div><div class="hm-lbl">Payback realista</div></div>
+    <div class="hm"><div class="hm-val">39×</div><div class="hm-lbl">Retorno Ano 1 realista</div></div>
+    <div class="hm"><div class="hm-val">9 dias</div><div class="hm-lbl">Payback realista</div></div>
     <div class="hm"><div class="hm-val">3</div><div class="hm-lbl">Assistentes de IA</div></div>
   </div>
 </section>
@@ -151,12 +154,12 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
 <section class="section">
   <div class="sec-badge">Situação Atual</div>
   <h2 class="sec-title">O cenário de compras da<br><em>Lyx</em> hoje</h2>
-  <p class="sec-desc">Dados base do diagnóstico — levantados na reunião de apresentação com Bruna, Marcus e Willian.</p>
+  <p class="sec-desc">Dados base do diagnóstico — levantados na reunião de agosto de 2026 com Bruna Stocco, Marcus Vinicius Munhoz e Willian Daniel.</p>
   <div class="metrics-grid">
     <div class="mc"><div class="mc-val">R$ 10M</div><div class="mc-lbl">em insumos por mês</div></div>
-    <div class="mc"><div class="mc-val">1.000+</div><div class="mc-lbl">ordens de compra/mês</div></div>
     <div class="mc"><div class="mc-val">3</div><div class="mc-lbl">compradores na equipe</div></div>
-    <div class="mc"><div class="mc-val">SAP</div><div class="mc-lbl">plataforma de gestão</div></div>
+    <div class="mc"><div class="mc-val">14</div><div class="mc-lbl">obras ativas (PR e Porto Alegre)</div></div>
+    <div class="mc"><div class="mc-val">SAP</div><div class="mc-lbl">ERP utilizado</div></div>
   </div>
 </section>
 
@@ -170,27 +173,27 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
   <div class="challenges">
     <div class="ci">
       <div class="ci-title">Cotação manual item a item no SAP</div>
-      <div class="ci-desc">Cotações grandes (ex.: hidráulica com ~80 itens e 5–6 fornecedores) travam o sistema — cada valor de cada fornecedor precisa ser digitado manualmente, um a um.</div>
+      <div class="ci-desc">O processo trava quando uma cotação passa de 80 itens — sem automação, cada item precisa ser lançado e comparado manualmente.</div>
     </div>
     <div class="ci">
-      <div class="ci-title">Expansão sem rede de fornecedores locais</div>
-      <div class="ci-desc">Com obras chegando em Santa Catarina, Cuiabá/MT e Suzano, o time precisa se deslocar fisicamente para prospectar — como a viagem recente a Porto Alegre só para buscar fornecedores.</div>
+      <div class="ci-title">Expansão sem rede de fornecedores local</div>
+      <div class="ci-desc">Nas novas frentes em Santa Catarina, Cuiabá/MT e Suzano, a Lyx ainda não tem uma base de fornecedores homologados para negociar com competitividade.</div>
     </div>
     <div class="ci">
-      <div class="ci-title">Time sobrecarregado com operacional</div>
-      <div class="ci-desc">Compradores "apagando incêndios" no dia a dia, sem tempo para se dedicar de fato às rodadas de negociação que trariam melhores condições.</div>
+      <div class="ci-title">Time sobrecarregado, sem tempo pra negociar</div>
+      <div class="ci-desc">Com apenas 3 compradores para 14 obras, o operacional consome o tempo que deveria ir para negociação e redução de custo.</div>
     </div>
     <div class="ci">
       <div class="ci-title">Zero governança nas negociações</div>
-      <div class="ci-desc">Conversas fragmentadas entre WhatsApp pessoal, e-mail e SAP — arquivos de fornecedores somem depois de semanas, sem histórico centralizado ou auditável.</div>
+      <div class="ci-desc">Cotações e tratativas espalhadas entre WhatsApp e e-mail — arquivos somem, histórico não é centralizado e decisões ficam sem rastro.</div>
     </div>
     <div class="ci">
-      <div class="ci-title">Verificação de certificação manual e falha</div>
-      <div class="ci-desc">Fornecedores precisam de certificação PSQ, INMETRO ou conformidade ABNT (exigência para financiamento junto à Caixa Econômica) — hoje validado manualmente, com falhas reconhecidas pelo time.</div>
+      <div class="ci-title">Verificação manual e falhas de certificação</div>
+      <div class="ci-desc">Checagem manual de PSQ, INMETRO e ABNT — exigência ligada ao financiamento via Caixa Econômica — sujeita a falhas que colocam a liberação de recursos em risco.</div>
     </div>
     <div class="ci">
-      <div class="ci-title">Poucas negociações de curva B, C e D</div>
-      <div class="ci-desc">Sem tempo, o comprador negocia bem os itens de curva A, mas fecha os demais com a primeira cotação mais barata — dinheiro deixado na mesa em volume relevante.</div>
+      <div class="ci-title">Pouca negociação em itens de curva B, C e D</div>
+      <div class="ci-desc">O time foca energia nos itens de maior valor — itens de menor curva ficam sem negociação estruturada, deixando saving na mesa.</div>
     </div>
   </div>
 </section>
@@ -201,50 +204,50 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
 <section class="section">
   <div class="sec-badge">Solução Proposta</div>
   <h2 class="sec-title">3 Assistentes de IA <em>dgenny®</em></h2>
-  <p class="sec-desc">Configurados especificamente para a operação de compras da Lyx, com 1.500 conversas iniciadas por mês.</p>
+  <p class="sec-desc">Configurados especificamente para a operação de compras da Lyx.</p>
   <div class="plan-card">
-    <div class="plan-title">3 Assistentes de IA · 1.500 Conversas iniciadas/mês</div>
+    <div class="plan-title">3 Assistentes de IA · 1.500 conversas iniciadas/mês</div>
     <div class="plan-features">
       <div class="pf">
         <div class="pf-icon">🤖</div>
         <div class="pf-text">
           <strong>Negociação automatizada via WhatsApp</strong>
-          <span>IA conduz cotações com fornecedores de ponta a ponta — inclusive lendo PDF, imagem e áudio enviados por eles</span>
+          <span>IA conduz cotações com fornecedores de ponta a ponta — mesmo em pedidos com 80+ itens, sem lançamento manual item a item</span>
         </div>
       </div>
       <div class="pf">
         <div class="pf-icon">🔍</div>
         <div class="pf-text">
-          <strong>Prospecção de fornecedores em novas praças</strong>
-          <span>Busca ativamente fornecedores em Santa Catarina, Cuiabá/MT e Suzano — sem depender de visita presencial do time</span>
+          <strong>Prospecção de fornecedores regionais</strong>
+          <span>Amplia ativamente a rede em Santa Catarina, Cuiabá/MT e Suzano à medida que a Lyx expande obras nessas praças</span>
         </div>
       </div>
       <div class="pf">
-        <div class="pf-icon">⚖️</div>
+        <div class="pf-icon">✅</div>
         <div class="pf-text">
-          <strong>Mapa de cotação automático</strong>
-          <span>Compara propostas recebidas por item, sinaliza o menor preço e o percentual de variação entre fornecedores</span>
+          <strong>Verificação automática de certificações</strong>
+          <span>Valida PSQ, INMETRO e ABNT antes da compra — reduzindo risco sobre as exigências do financiamento Caixa Econômica</span>
         </div>
       </div>
       <div class="pf">
-        <div class="pf-icon">🛡️</div>
+        <div class="pf-icon">📈</div>
         <div class="pf-text">
-          <strong>Checagem de certificação de fornecedor</strong>
-          <span>Questiona o fornecedor sobre PSQ, INMETRO e normas ABNT conforme critério definido pelo comprador na observação do pedido</span>
+          <strong>Negociação em itens de curva B, C e D</strong>
+          <span>Cobre a cauda de itens hoje sem negociação estruturada, capturando saving que ficava fora do radar do time</span>
         </div>
       </div>
       <div class="pf">
-        <div class="pf-icon">🔗</div>
+        <div class="pf-icon">🔄</div>
         <div class="pf-text">
-          <strong>Integração SAP (em alinhamento)</strong>
-          <span>Prevista no plano — mapa de cotação preenchido segue direto para emissão da ordem de compra, eliminando digitação manual</span>
+          <strong>Follow-up automático com fornecedores</strong>
+          <span>Cobra retorno de propostas pendentes sem depender do time — nenhuma cotação fica em aberto sem resposta</span>
         </div>
       </div>
       <div class="pf">
         <div class="pf-icon">📊</div>
         <div class="pf-text">
-          <strong>Governança total das negociações</strong>
-          <span>100% das conversas registradas, com histórico salvo e pesquisável — nada se perde depois de 15 ou 30 dias</span>
+          <strong>Governança total das compras</strong>
+          <span>Fim da dispersão entre WhatsApp e e-mail — 100% das negociações registradas, auditáveis e centralizadas</span>
         </div>
       </div>
     </div>
@@ -256,46 +259,49 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
   <div class="roi-inner">
     <div class="sec-badge">Retorno sobre Investimento</div>
     <h2 class="sec-title">Quanto a dgenny® <em>gera de saving</em></h2>
-    <p class="sec-desc" style="margin-bottom:0">Base de cálculo: R$ 10.000.000/mês em compras de insumos. Saving sobre nova base de fornecedores prospectados pela IA e maior competição nas cotações.</p>
+    <p class="sec-desc" style="margin-bottom:0">Base de cálculo: R$ 10.000.000/mês em compras de insumos. Saving sobre nova base de fornecedores prospectados pela IA, maior competição nas cotações e negociação de itens de curva B, C e D.</p>
     <div class="roi-table">
       <div class="rc cons">
         <div class="rc-scenario">Conservador</div>
-        <div class="rc-conv">5% de saving</div>
-        <div class="rc-roi">49×</div>
+        <div class="rc-conv">2% de saving</div>
+        <div class="rc-roi">19×</div>
         <div class="rc-lbl">Retorno Ano 1</div>
         <div class="rc-rows">
-          <div class="rc-row"><span class="rc-rl">Economia/mês</span><span class="rc-rv">R$ 500.000</span></div>
-          <div class="rc-row"><span class="rc-rl">Economia/ano</span><span class="rc-rv">R$ 6.000.000</span></div>
-          <div class="rc-row"><span class="rc-rl">Ganho líquido Ano 1</span><span class="rc-rv">R$ 5.880.000</span></div>
-          <div class="rc-row"><span class="rc-rl">Payback</span><span class="rc-rv">~7 dias</span></div>
+          <div class="rc-row"><span class="rc-rl">Economia/mês</span><span class="rc-rv">R$ 200.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Economia/ano</span><span class="rc-rv">R$ 2.400.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Investimento Ano 1</span><span class="rc-rv">R$ 120.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Ganho líquido Ano 1</span><span class="rc-rv">R$ 2.280.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Payback</span><span class="rc-rv">~18 dias</span></div>
         </div>
       </div>
       <div class="rc real">
         <div class="rc-scenario">Realista</div>
-        <div class="rc-conv">8% de saving</div>
-        <div class="rc-roi" style="color:#6660B4">79×</div>
+        <div class="rc-conv">4% de saving</div>
+        <div class="rc-roi" style="color:#6660B4">39×</div>
         <div class="rc-lbl">Retorno Ano 1</div>
         <div class="rc-rows">
-          <div class="rc-row"><span class="rc-rl">Economia/mês</span><span class="rc-rv">R$ 800.000</span></div>
-          <div class="rc-row"><span class="rc-rl">Economia/ano</span><span class="rc-rv">R$ 9.600.000</span></div>
-          <div class="rc-row"><span class="rc-rl">Ganho líquido Ano 1</span><span class="rc-rv">R$ 9.480.000</span></div>
-          <div class="rc-row"><span class="rc-rl">Payback</span><span class="rc-rv">~5 dias</span></div>
+          <div class="rc-row"><span class="rc-rl">Economia/mês</span><span class="rc-rv">R$ 400.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Economia/ano</span><span class="rc-rv">R$ 4.800.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Investimento Ano 1</span><span class="rc-rv">R$ 120.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Ganho líquido Ano 1</span><span class="rc-rv">R$ 4.680.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Payback</span><span class="rc-rv">~9 dias</span></div>
         </div>
       </div>
       <div class="rc proj">
         <div class="rc-scenario">Projetado</div>
-        <div class="rc-conv">12% de saving</div>
-        <div class="rc-roi">119×</div>
+        <div class="rc-conv">6% de saving</div>
+        <div class="rc-roi">59×</div>
         <div class="rc-lbl">Retorno Ano 1</div>
         <div class="rc-rows">
-          <div class="rc-row"><span class="rc-rl">Economia/mês</span><span class="rc-rv">R$ 1.200.000</span></div>
-          <div class="rc-row"><span class="rc-rl">Economia/ano</span><span class="rc-rv">R$ 14.400.000</span></div>
-          <div class="rc-row"><span class="rc-rl">Ganho líquido Ano 1</span><span class="rc-rv">R$ 14.280.000</span></div>
-          <div class="rc-row"><span class="rc-rl">Payback</span><span class="rc-rv">~3 dias</span></div>
+          <div class="rc-row"><span class="rc-rl">Economia/mês</span><span class="rc-rv">R$ 600.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Economia/ano</span><span class="rc-rv">R$ 7.200.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Investimento Ano 1</span><span class="rc-rv">R$ 120.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Ganho líquido Ano 1</span><span class="rc-rv">R$ 7.080.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Payback</span><span class="rc-rv">~6 dias</span></div>
         </div>
       </div>
     </div>
-    <p class="roi-note">* Retorno previsível, não garantido. Saving aplicado sobre o volume de compras de R$ 10M/mês — gerado por maior competição entre fornecedores e negociação estruturada pela IA. Investimento Ano 1 = R$ 9.000 × 12 meses + R$ 12.000 implantação = R$ 120.000. Ganhos de produtividade não contabilizados.</p>
+    <p class="roi-note">* Retorno previsível, não garantido. Saving aplicado sobre o volume de compras de R$ 10M/mês — gerado por maior competição entre fornecedores, prospecção regional e negociação estruturada pela IA. Investimento Ano 1 = R$ 9.000 × 12 meses + R$ 12.000 implantação = R$ 120.000. Retorno expresso como múltiplo do investimento (ganho líquido ÷ investimento). Ganhos de produtividade não contabilizados.</p>
   </div>
 </section>
 
@@ -306,24 +312,24 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
   <p class="sec-desc">Além do saving financeiro, a dgenny® multiplica a capacidade de compras sem aumentar a equipe.</p>
   <div class="prod-grid">
     <div class="prod-card">
-      <div class="prod-num">24/7</div>
-      <div class="prod-title">Negociação contínua</div>
-      <div class="prod-desc">A IA conversa com fornecedores mesmo fora do expediente — cotações disparadas à noite chegam prontas pela manhã</div>
+      <div class="prod-num">1.500</div>
+      <div class="prod-title">Conversas iniciadas/mês</div>
+      <div class="prod-desc">Volume de negociações conduzido pela IA com velocidade e consistência que o processo manual no SAP não alcança</div>
     </div>
     <div class="prod-card">
       <div class="prod-num">5×</div>
       <div class="prod-title">Produtividade do time</div>
-      <div class="prod-desc">Os 3 compradores da Lyx passam a negociar itens de curva B, C e D que hoje ficam sem tempo de atenção</div>
+      <div class="prod-desc">Os 3 compradores passam a sustentar muito mais negociações simultâneas sem aumentar headcount</div>
     </div>
     <div class="prod-card">
       <div class="prod-num">80%</div>
       <div class="prod-title">Operacional automatizado</div>
-      <div class="prod-desc">Fim do preenchimento manual do mapa de cotação item a item — o time foca em negociação e decisão estratégica</div>
+      <div class="prod-desc">Fim da cotação manual item a item e da dispersão entre WhatsApp e e-mail — o time foca em negociação estratégica</div>
     </div>
     <div class="prod-card">
-      <div class="prod-num">→</div>
-      <div class="prod-title">Integração SAP</div>
-      <div class="prod-desc">Prevista no plano — mapa de cotação pronto segue direto para emissão da ordem de compra, sem retrabalho</div>
+      <div class="prod-num">24/7</div>
+      <div class="prod-title">Negociação contínua</div>
+      <div class="prod-desc">A IA negocia e responde fornecedores a qualquer hora, sem depender do horário comercial do time</div>
     </div>
   </div>
 </section>
@@ -334,23 +340,25 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
 <section class="section">
   <div class="sec-badge">Investimento</div>
   <h2 class="sec-title"><em>Investimento</em></h2>
-  <p class="sec-desc">Implantação R$ 12.000 (única vez) — configuração dos 3 assistentes, integração SAP, treinamento e acompanhamento inicial.</p>
+  <p class="sec-desc">Implantação (pagamento único) — configuração dos 3 assistentes, mapeamento de fornecedores regionais, parametrização das regras de certificação e treinamento do time.</p>
   <div style="max-width:480px;margin:0 auto">
     <div class="pc mensal">
       <div class="ptag">Plano Mensal</div>
-      <div class="pname">3 Assistentes de IA dgenny®</div>
-      <div class="pprice">R$ 9.000 <span class="punit">/ mês</span></div>
+      <div class="pname">3 Assistentes de IA · 1.500 conversas/mês</div>
+      <div class="pprice">R$ 9.000</div>
+      <div class="pperiod">por <strong style="color:#FFBEF5">mês</strong></div>
       <ul class="pitems">
         <li>3 Assistentes de IA dgenny®</li>
-        <li>1.500 conversas iniciadas por mês</li>
+        <li>1.500 conversas iniciadas/mês</li>
         <li>WhatsApp Business oficial (Meta)</li>
-        <li>Prospecção e equalização automática</li>
-        <li>Checagem de certificação de fornecedor</li>
+        <li>Prospecção de fornecedores regionais (SC, MT, SP)</li>
+        <li>Verificação automática de certificações (PSQ/INMETRO/ABNT)</li>
+        <li>Negociação de itens de curva B, C e D</li>
         <li>Governança e rastreabilidade total</li>
-        <li>Integração SAP (em alinhamento)</li>
         <li>Suporte dedicado contínuo</li>
       </ul>
-      <div class="pimpl">Implantação (única vez): <strong>R$ 12.000</strong></div>
+      <div class="ptotal">+ <strong style="color:#FFBEF5">R$ 12.000</strong> de <strong style="color:#FFBEF5">implantação</strong> (pagamento único)</div>
+      <div class="validity-box">Proposta válida até <strong>30/08/2026</strong></div>
     </div>
   </div>
 </section>
@@ -361,21 +369,21 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
 <section class="section">
   <div class="sec-badge">Próximos Passos</div>
   <h2 class="sec-title">Da aprovação ao<br><em>primeiro resultado</em></h2>
-  <p class="sec-desc" style="margin-bottom:60px">Implantação estruturada para zero impacto na operação atual durante a transição.</p>
+  <p class="sec-desc" style="margin-bottom:60px">Implantação estruturada para zero impacto na operação atual das 14 obras durante a transição.</p>
   <div class="timeline">
-    <div class="ts"><div class="ts-dot">1</div><div class="ts-title">Aprovação</div><div class="ts-desc">Alinhamento final com Willian, Bruna e Marcus</div></div>
-    <div class="ts"><div class="ts-dot">2</div><div class="ts-title">Contrato &amp; Kick-off</div><div class="ts-desc">Assinatura e início do setup técnico</div></div>
-    <div class="ts"><div class="ts-dot">3</div><div class="ts-title">Implantação</div><div class="ts-desc">Configuração dos 3 assistentes e liberação de acesso ao SAP</div></div>
+    <div class="ts"><div class="ts-dot">1</div><div class="ts-title">Aprovação</div><div class="ts-desc">Validação final de Willian Daniel após alinhamento com Bruna e Marcus</div></div>
+    <div class="ts"><div class="ts-dot">2</div><div class="ts-title">Contrato &#038; Kick-off</div><div class="ts-desc">Assinatura e início do setup técnico</div></div>
+    <div class="ts"><div class="ts-dot">3</div><div class="ts-title">Implantação</div><div class="ts-desc">Configuração dos 3 assistentes e mapeamento de fornecedores regionais</div></div>
     <div class="ts"><div class="ts-dot">4</div><div class="ts-title">Go-live</div><div class="ts-desc">Primeiras negociações de compra com a dgenny® em produção</div></div>
-    <div class="ts"><div class="ts-dot">5</div><div class="ts-title">Integração SAP</div><div class="ts-desc">Liberação de chaves de API pelo time SAP e finalização da integração</div></div>
+    <div class="ts"><div class="ts-dot">5</div><div class="ts-title">Acompanhamento</div><div class="ts-desc">Otimização contínua para maximizar saving nas 14 obras</div></div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
   <h2>Pronto para transformar<br>compras em margem?</h2>
-  <p>O próximo passo é avançar com os detalhes da implantação.<br>O Sávio está disponível para seguir com o Willian.</p>
-  <a href="https://www.dgenny.com.br/registro-cliente" target="_blank" class="cta-btn">Avançar com a dgenny®</a>
+  <p>O próximo passo é alinhar os detalhes da implantação.<br>O Sávio está disponível para avançar com a Lyx.</p>
+  <a href="mailto:savio.stang@dgenny.com.br" class="cta-btn">Falar com o Sávio</a>
 </section>
 
 <div class="footer">
